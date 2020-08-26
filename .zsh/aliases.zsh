@@ -12,5 +12,5 @@ alias gits="git status"							# git status
 alias gitc="git commit"							# git commit
 alias gitp="git push"							# git push
 alias gitl="git pull"							# git pull
-alias update-vscode="/usr/bin/python3 $HOME/Programming/automation_scripts/update_vscode/update_vscode.py $HOME/Programming" # update vscode
+alias update-vscode="/usr/bin/python3 $HOME/.bin/update_vscode.py $HOME/Coding" # update vscode
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # dotfile management
