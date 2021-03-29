@@ -1,5 +1,5 @@
 alias c="clear"								# clear screen
-alias pcc="sudo pkgcacheclean 1" 					# remove all but 1 rev package
+alias pcc="sudo paccache -rk 1" 					# remove all but 1 rev package
 alias pacs="yay -Ss"		 					# pacman search
 alias pacu="yay"	 						# pacman update
 alias paclist="sudo yay -Sy && sudo yay -Qu"				# show all packages that can be upgraded
