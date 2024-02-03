@@ -7,19 +7,22 @@ function s() {
 }
 
 function activate() {
-  envs=(".env/" ".venv/" ".virtualenv/" "env/" "venv/" "virtualenv/")
+  envs=(".env" ".venv" ".virtualenv" "env" "venv" "virtualenv")
   found=false
-  for env in $envs; do
-    for dir in `ls -Ad1 -- .*/ */`; do
-      if [ "$env"  = "$dir" ]; then
-        source $env/bin/activate
-	found=true
-	break
-      fi
+  for dir in `find .* * -maxdepth 0 -type d`; do
+    for env in $envs; do
+        if [ "$env"  = "$dir" ]; then
+            source $env/bin/activate
+    	    found=true
+	        break
+        fi
     done
+    if ($found); then
+        break
+    fi
   done
 
-  if ! "$found"; then
+  if ! $found; then
     echo "No virtual environment found!"
   fi
 }
