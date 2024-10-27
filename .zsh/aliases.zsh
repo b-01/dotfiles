@@ -14,3 +14,4 @@ alias gitp="git push"							# git push
 alias gitl="git pull"							# git pull
 alias update-vscode="/usr/bin/python3 $HOME/.bin/update_vscode.py $HOME/Coding" # update vscode
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # dotfile management
+alias mount_thinkcentre='sshfs -o default_permissions user@thinkcentre:/media/sda_crypt/upload $HOME/Downloads/mediaserver-content'
